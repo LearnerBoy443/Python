@@ -33,6 +33,7 @@ print(series)
 #avg_temp=total_temp/int(len(series))
 #print(avg_temp)
 
+
 total=sum(series)#sum of all integer in list
 print(total)
 
@@ -54,9 +55,23 @@ print(data[data.day=="Monday"])
 
 print(data[data.temp==data.temp.max()])
       
-      
-      
-      
+monday=data[data.day=="Monday"]
+print(monday.condition)      
+
+x=data[data.day=="Monday"]
+celsius=x.temp
+
+temperature=(celsius*(9/5))+32
+print(temperature)      
+
+#making dataframe from scratch
+data_dict={
+        "students":["Arpan","Abhirup","Henry"],
+        "scores":["78","97","89"]
+}
+
+data=pandas.DataFrame(data_dict)
+data.to_csv("new_data.csv")
       
       
       
